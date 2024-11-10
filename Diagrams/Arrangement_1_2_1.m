@@ -1,4 +1,4 @@
-function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
+function Arrangement_1_2_1(x, data1, data2, data3, data4, data5)
 
     A = get(0, 'ScreenSize');
 
@@ -10,7 +10,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
     hold("on");
         title ("Graph 1");
 
-        [AX1 H1 H2] = plotyy(x, y1, x, [y4; y5], 'plot');
+        [AX1 H1 H2] = plotyy(x, data1, x, [data4; data5], 'plot');
 
         xlabel("x label");
         ylabel (AX1(1), "Some label [unit]");
@@ -20,7 +20,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
 
         set(gca, 'XTick' ,0:1:20);
 
-        legend([H1;H2], 'y1', 'y4', 'y5', 'location', 'northeastoutside');
+        legend([H1;H2], 'data1', 'data4', 'data5', 'location', 'northeastoutside');
         grid on
     hold("off");
 
@@ -28,7 +28,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
     hold("on");
         title ("Graph 2");
 
-        [AX2 H1 H2] = plotyy(x, y1, x, y4, 'plot');
+        [AX2 H1 H2] = plotyy(x, data1, x, data4, 'plot');
 
         xlabel("x label");
         ylabel (AX2(1), "Some label [unit]");
@@ -36,7 +36,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
         axHandle = get (gcf, "currentaxes");
         set(axHandle, 'OuterPosition', [-0.1, 0.3, 0.55, 0.35]);
 
-        legend([H1;H2],'y1', 'y4', 'location', 'northeastoutside');
+        legend([H1;H2],'data1', 'data4', 'location', 'northeastoutside');
         grid on
     hold("off");
 
@@ -44,8 +44,8 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
     hold("on");
         title ("Graph 3");
 
-        [AX3 H1 H2] = plotyy(x, y1, x, y4, 'plot');
-        H3 = plot(AX3(1), x, y3, 'linewidth', 2);
+        [AX3 H1 H2] = plotyy(x, data1, x, data4, 'plot');
+        H3 = plot(AX3(1), x, data3, 'linewidth', 2);
 
         xlabel("x label");
         ylabel (AX3(1), "Some label [unit]");
@@ -53,7 +53,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
         axHandle = get (gcf, "currentaxes");
         set(axHandle, 'OuterPosition', [0.4, 0.3, 0.6, 0.35]);
 
-        legend([H1;H2;H3],'y1', 'y4', 'y3', 'location', 'northeastoutside');
+        legend([H1;H2;H3],'data1', 'data4', 'data3', 'location', 'northeastoutside');
         grid on
     hold("off");
 
@@ -61,7 +61,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
     hold("on");
         title ("Graph 4");
 
-        [AX4 H1 H2] = plotyy(x, y1, x, [y4; y5], 'plot');
+        [AX4 H1 H2] = plotyy(x, data1, x, [data4; data5], 'plot');
 
         xlabel("x label");
         ylabel (AX4(1), "Some label [unit]");
@@ -69,7 +69,7 @@ function Arrangement_1_2_1(x, y1, y2, y3, y4, y5)
         axHandle = get (gcf, "currentaxes");
         set(axHandle, 'OuterPosition', [-0.1, -0.05, 1.1, 0.4]);
 
-        legend([H1;H2],'y1', 'y4', 'y5', 'location', 'northeastoutside');
+        legend([H1;H2],'data1', 'data4', 'data5', 'location', 'northeastoutside');
         grid on
     hold("off");
 
